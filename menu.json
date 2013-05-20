@@ -1,0 +1,9 @@
+[{
+	"type" = "link",
+	"src" => "/",
+	"title"=> "Главная"
+},{
+	"type" = "page",
+	"name" => "mods",
+	"title"=> "Модули"
+}]
