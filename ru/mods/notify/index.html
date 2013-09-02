@@ -1,0 +1,63 @@
+<!--[*]
+[tt=content][/tt]
+
+[var=meta_title]Модуль «Уведомления на e-mail» / Модули / Платформа Абрикос - бесплатная система управления сайтом (CMS, WebOS)[/var]
+[*]-->
+<h3>Модуль «Уведомления на e-mail»</h3>
+<p>
+	Этот модуль необходим для отправки сообщений на электронную почту пользователей на Вашем сайте.
+</p>
+
+
+<h4>Скачать</h4>
+<p>
+	Скачать самую последнюю версию модуля с репозитория GitHub:
+	<a href="https://github.com/abricos/abricos-mod-notify/archive/master.zip">abricos-mod-notify.zip</a>
+</p>
+
+<h4>Конфигурация</h4>
+<p>
+	Все настройки производятся в файле /includes/config.php
+</p>
+<p>
+	<strong>Отладка отправляемых сообщений</strong>
+</p>
+
+<pre>
+$config['module']['notify'] = array(
+	"totestfile" => true
+);
+</pre>
+<p>
+	Если включена отладка отправляемых сообщений, то письма не уходят на почту, а создаются в виде отдельных файлов в папке 
+	<i>/cache/eml</i>. При этом папка <i>/cache/eml</i> должно иметь права на запись.
+</p>
+
+<p>
+	<strong>Настройка SMTP</strong>
+</p>
+
+<pre>
+$config["module"]["notify"] = array(
+	"SMTP" => true,                          // Использовать SMTP
+	"SMTPHost" => "mail.yourdomain.com",     // SMTP сервер
+	"SMTPPort" => 26,                        // SMTP порт
+	"SMTPAuth" => true,                      // использовать авторизацию SMTP
+	"SMTPUsername" => "yourname@youdomain",  // имя пользователя SMTP
+	"SMTPPassword" => "yourpassword"         // пароль пользователя SMTP
+);
+</pre>
+
+<p>&nbsp;</p>
+
+<h4>Исходный код</h4>
+<p>
+	Исходный код модуля доступен на GitHub: 
+	<a href="https://github.com/abricos/abricos-mod-notify" title="Исходный код модуля">GitHub.com/abricos/abricos-mod-notify</a> 
+</p>
+
+
+
+<script type='text/javascript' charset='utf-8'>
+	Brick.f('taskplanet', 'scshot', 'initScreenshots');
+</script>
